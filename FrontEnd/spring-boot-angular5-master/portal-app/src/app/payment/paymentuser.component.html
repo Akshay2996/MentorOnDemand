@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    h4{
+    text-align: center;
+    }
+    table{
+        font-size: 14px;
+        border-collapse: collapse;
+        width: 100%;
+        border-spacing: 0;
+    }
+    th{
+        text-align: center;
+    }
+    tr{
+        text-align: center;
+    }
+    body{
+        background-image: linear-gradient(-45deg,rgb(209, 136, 136),rgb(135, 196, 204),rgb(224, 168, 224));
+        height: 100vh;
+        margin: 0px;
+    }
+    button{
+        font-size: 14px;
+    }
+  </style>
+
+ <body>
+  
+  <h4 class="modal-title">Payment Details</h4>
+
+ <div class="modal-body">
+  <table class="table table-striped table-hover table-bordered"  style="width: 80%; margin-left: 10%;">
+    <thead>
+    <tr class="info">
+      <th class="hidden">Id</th>
+      <th>Id</th>
+      <th>Technology Name</th>
+      <th>Mentor Name</th>
+      <th>Amount</th>
+      <th>Action</th>
+     
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of payments"  class="active">
+      <td>{{user.id}}</td>
+      <td>{{user.techName}}</td>
+      <td>{{user.mentorName}}</td>
+      <td>{{user.amount}}</td>
+      <td><button class="btn btn-primary btn-lg"   (click)="getTraining2(user.trainingId,user.amount,user.id)"  > Proceed To Pay</button></td>
+      
+     <!-- <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td> -->
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<br><br>
+
+<div *ngIf="showId">      
+<table class="table table-hover table-bordered" style="width: 31%; margin-left: 35%;">
+    <thead>
+        <tr>
+            <th class="hidden">Id </th>
+            <th>Mentor Name</th>
+            <th>Fees To Be Paid</th>
+          
+            <th></th>
+            
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="hidden">{{trainings.trainingId}}</td>
+                <td>{{trainings.mentor.firstName}} {{trainings.mentor.lastName}}</td>
+                  <td> {{trainings.fees}} </td>
+                <td> <button type="button" class="btn btn-lg btn-success"  style="width:150px;" (click)="Payfees(trainings.fees)" > Pay Fees</button></td>
+            
+              </tr>
+        </tbody>
+</table>
+</div>
+</body>

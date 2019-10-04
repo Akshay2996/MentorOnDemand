@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+    background-image: linear-gradient(45deg,rgb(209, 136, 136),rgb(135, 196, 204),rgb(224, 168, 224));
+  }
+  #form{
+    max-width: 500px;
+    min-height: 750px;
+    font-size: 14px;
+    text-align: center;
+  }
+  button{
+    width: 50%;
+    font-size: 14px;
+    border-radius:25px;
+  }
+  input{
+    font-size: 14px;
+    border-radius:25px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<a routerLink="/admin" style="color: black"><h3>Back</h3></a>
+<br><br>
+<div id="form" class="container">
+        <h2 class="text-center">Add User</h2>
+        <br>
+      <form>
+        <div class="form-group">
+          <input type="email" [(ngModel)]="user.email" placeholder="Email Address" name="email" class="form-control" id="email">
+        </div>
+      <br>
+        <div class="form-group">
+          <input type="userName" [(ngModel)]="user.userName" placeholder="Username" name="userName" class="form-control" id="userName">
+        </div>
+      <br>
+        <div class="form-group">
+          <input [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+        </div>
+      <br>
+        <div class="form-group">
+          <input [(ngModel)]="user.lastName" placeholder="Last Name" name="lastName" class="form-control" id="lastName">
+        </div>
+      <br>
+        <div class="form-group">
+            <input type="password" [(ngModel)]="user.password" placeholder="Password" name="password" class="form-control" id="password">
+        </div>
+      <br>
+        <div class="form-group">
+            <input type="tel" [(ngModel)]="user.contactNumber" placeholder="Contact Number" name="contactNumber" class="form-control" id="contactNumber">
+        </div>
+      <br>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="user.regCode" placeholder="Registration Code" name="regCode" class="form-control" id="regCode">
+        </div>
+      <br>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="user.linkedinUrl" placeholder="linkedinUrl " name="linkedinUrl" class="form-control" id="linkedinUrl">
+        </div>
+      <br>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="user.yearsofExperience" placeholder="Years of Experience (0,1,2 etc.)" name="yearsofExperience" class="form-control" id="yearsofExperience">
+        </div>
+      <br>
+      <br>
+        <button class="btn btn-success" (click)="createUser()" routerLink="/admin">Create</button>
+      </form>
+      </div>
+</body>
+</html>
+      

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  background-image: linear-gradient(to right, mediumseagreen,powderblue,tomato);
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: rgb(49, 208, 236);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: purple;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+}
+h1{
+  color: black;
+  text-align: center;
+}
+h3{
+  color: black;
+  text-align: center;
+}
+
+a{
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    font-size: 75%;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+table{
+  height: 50%;
+  width: 100%;
+}
+
+th{
+  color: black;
+
+}
+
+button{
+  font-size: 15px;
+}
+
+</style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+
+<div class="sidebar">
+  <a routerLink="/admin" href="#home"><span class="glyphicon glyphicon-home"></span> Home</a>
+  <a href="/admin#p2"><span class="glyphicon glyphicon-cog"></span> Services</a>
+  <a href="/admin#p1"><span class="glyphicon glyphicon-user"></span> About Us</a>
+  <a href="/admin#p3"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a>
+  <a routerLink="/adminlogin"><span class="glyphicon glyphicon-off"></span> Logout</a>
+</div>
+
+<div class="content" style="overflow-x: auto">
+  <h1>Welcome Admin</h1>
+        <br>
+        <br>
+        <h2 align="center">Database Storage</h2>
+        <br>
+        <br>
+        <table class="table table-hover">
+            <thead class="thead-dark">
+              <th scope="col">Mentor Details</th>
+              <th scope="col">User Details</th>
+              <th scope="col">Technology Details</th>
+              <th scope="col">Payment Details</th>
+              <th scope="col">Skill Details</th>
+              <th scope="col">Training Details</th>
+            </thead>
+            
+            <tbody>
+              <tr>
+                <td><button routerLink="/mentor" class="btn btn-info">Mentor List</button></td>
+                <td><button routerLink="/user" class="btn btn-primary">User List</button></td>
+                <td><button routerLink="/technology" class="btn btn-success">Technology List</button></td>
+                <td><button routerLink="/payment" class="btn btn-info">Payment List</button></td>
+                <td><button routerLink="/skill" class="btn btn-primary">Skill List</button></td>
+                <td><button routerLink="/training" class="btn btn-success">List Training</button></td>  
+              </tr>
+              <tr>
+                  <td><button routerLink="/addmentor" class="btn btn-info">Add Mentor</button></td>
+                  <td><button routerLink="/add" class="btn btn-primary">Add User</button></td>
+                  <td><button routerLink="/addtechnology" class="btn btn-success">Add Technology</button></td>
+                  <td></td>
+                <td><button routerLink="/addskill" class="btn btn-primary">Add Skill</button></td>
+                <td><button routerLink="/addtraining" class="btn btn-success">Add Training</button></td>
+              </tr>
+            </tbody>
+          </table>
+  </div>
+
+  <div id="p2" class="content">
+      <br>
+      <br>
+      <br>
+  <h2 align="center">Services</h2>
+    <br>
+    <br>
+    <br>
+
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <br>
+  
+  
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+  <br>
+  <br>
+  <br>
+  </div>
+
+  <div id="p1" class="content" background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+    <br>
+    <br>
+    <br>
+    <h2 align="center">About Us</h2>
+      <br>
+      <br>
+      <br>
+  
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <br>
+    
+    
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <br>
+    <br>
+    <br>
+    </div>
+    
+    <div id="p3" class="content">
+        <br>
+        <br>
+        <br>
+    <h2 align="center">Contact Us</h2>
+      <br>
+      <br>
+      <br>
+  
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <br>
+    
+    
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quiUt enim ad minim veniam, quis nostrud exercitation ullamco laboris...
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+
+</body>
+</html>

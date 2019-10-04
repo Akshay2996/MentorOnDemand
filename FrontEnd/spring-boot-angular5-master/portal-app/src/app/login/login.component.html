@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+	<style type="text/css">
+		body{font-family: Arial,Helvetica,sans-serif;
+			background-image: linear-gradient(tomato,skyblue,powderblue);
+			font-size: 13px;
+			min-height:100vh;
+			}
+		input[type=text],[type=password]{
+			width: 35%;
+			padding: 12px 20px;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			margin: 13px 0 13px 0;
+			border-radius: 20px;
+			text-align: center;
+		}
+		button{
+			background-color: mediumseagreen;
+			color:white;
+			padding: 14px 20px;
+			border:none;
+			cursor: pointer;
+			border-radius: 20px;
+			width: 30%;
+		}
+		button:hover{
+			opacity: 0.8;
+		}
+		div.imgcontainer{
+			text-align: center;
+			margin: 24px 0 12px 0;
+		}
+		img.avatar{
+			width: 20%;
+			border-radius: 50%;
+			height: 40%;
+		}
+		span.psw{
+			text-align: center;
+		}
+		.container{
+			padding:16px;
+		}
+		.loginbtn{
+			text-align: center;
+			width: 15%;
+			padding: 10px 18px;
+			background-color: green;
+			margin: 0, 20px, 60px, 30px;
+		}
+	</style>
+</head>
+<body>
+	<a routerLink="/startpage" style="color: black"><h2>Back</h2></a>
+	<h2 style="text-align: center;"> Login for Mentor</h2>
+	<form action="TrainingforMentor1.html">
+		<div class="imgcontainer">
+			<img src="/assets/avatar2.png" alt="Avatar" class="avatar">
+		</div>
+		<div class="container text-center">
+			<input type="text" [(ngModel)]="mentor.userName" name="uname" placeholder="Enter Username"><br>
+			<input type="password" [(ngModel)]="mentor.password" placeholder="Enter Password" name="psw"><br><br>
+			<button class="loginbtn" (click)='validate(mentor.userName, mentor.password)' type="submit">Login</button><br><br>
+			<span class="psw"><a routerLink="/signupmentor">Forgot password?/Signup</a></span>
+		</div>
+		<!--<div class="container" style="background-color: transparent;">
+			<span class="psw"><a routerLink="/signup">Forgot password?/Signup</a></span>
+		</div>-->
+	</form>
+</body>
+</html>

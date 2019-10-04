@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Page</title>
+	<style type="text/css">
+		body{font-family: Arial,Helvetica,sans-serif;
+			background-image: linear-gradient(45deg,rgb(41, 176, 194), tomato);
+			min-height: 100vh;
+			}
+		input[type=text],[type=password]{
+			width: 35%;
+			padding: 12px 20px;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			margin: 13px 0 13px 0;
+			font-size: 15px;
+			border-radius: 20px;
+			text-align: center;
+		}
+		button{
+			background-color: mediumseagreen;
+			color:white;
+			padding: 14px 20px;
+			border:none;
+			cursor: pointer;
+			width: 15%;
+			border-radius: 25px;
+		}
+		button:hover{
+			opacity: 0.8;
+		}
+		div.imgcontainer{
+			text-align: center;
+			margin: 24px 0 12px 0;
+		}
+		img.avatar{
+			width: 20%;
+			border-radius: 30%;
+			height: 40%;
+		}
+		span.psw{
+			float: right;
+		}
+		.container{
+			padding:16px;
+		}
+	</style>
+</head>
+<body>
+	<a routerLink="/startpage" style="color: black"><h2>Back</h2></a>
+	<h1 style="text-align: center;">Login For Admin</h1>
+	<form action="TrainingforMentor1.html">
+		<div class="imgcontainer">
+			<img src="/assets/adminlogin.png" alt="Avatar" class="avatar">
+		</div>
+		<div class="container text-center">
+			<input type="text" name="uname" placeholder="Enter Username" (input)='usr = $event.target.value'><br>
+			<input type="password" placeholder="Enter Password" name="psw" (input)='pwd = $event.target.value'><br><br>
+			<button type="submit" on-click='validate()' style="font-size: 15px;">Login</button>
+		</div>
+	</form>
+</body>
+</html>

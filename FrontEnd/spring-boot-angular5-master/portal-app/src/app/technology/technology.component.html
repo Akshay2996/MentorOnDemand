@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+  <head>
+<style>
+  h1{
+    text-align: center;
+  }
+  table{
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+  }
+  body{
+    background-image: linear-gradient(-45deg,rgb(209, 136, 136),rgb(135, 196, 204),rgb(224, 168, 224));
+    height: 100vh;
+    margin: 0px;
+  }
+  button{
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+    <a routerLink="/admin" style="color: black"><h3>Back</h3></a>
+    <br>
+<div class="container text-center" style="overflow-x: auto;">
+  <h2> Technology Details</h2>
+  <br><br>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Technology Name</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let technology of technology">
+      <td>{{technology.id}}</td>
+      <td>{{technology.techName}}</td>
+      <td>{{technology.description}}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  </body>
+  </html>

@@ -1,0 +1,66 @@
+<!Doctype html>
+<html>
+  <head>
+<style>
+  h1{
+    text-align: center;
+  }
+  table{
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+  }
+  body{
+    background-image: linear-gradient(-45deg,rgb(209, 136, 136),rgb(135, 196, 204),rgb(224, 168, 224));
+    height: 100vh;
+    margin: 0px;
+  }
+  button{
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+    <a routerLink="/admin" style="color: black"><h3>Back</h3></a>
+<div class="container text-center" style="overflow-x: auto;">
+  <br>
+  <h2> Mentor Details</h2>
+  <br><br><br>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Email</th>
+      <th>Contact Number</th>
+      <th>Reg. Code</th>
+      <th>Role</th>
+      <th>LinkedIn URL</th>
+      <th>Years of Experience</th>
+      <th>Rating</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let mentor of mentor">
+      <td>{{mentor.id}}</td>
+      <td>{{mentor.firstName}}</td>
+      <td>{{mentor.lastName}}</td>
+      <td>{{mentor.userName}}</td>
+      <td>{{mentor.password}}</td>
+      <td>{{mentor.email}}</td>
+      <td>{{mentor.contactNumber}}</td>
+      <td>{{mentor.regCode}}</td>
+      <td>{{mentor.role}}</td>
+      <td>{{mentor.linkedinUrl}}</td>
+      <td>{{mentor.yearsofExperience}}</td>
+      <td>{{mentor.rating}}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  </body>
+  </html>

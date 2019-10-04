@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h1{
+      color: black;
+      text-align: center;
+    }
+    table{
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    }
+    th{
+      text-align: center;
+    }
+    td{
+      text-align: center;
+    }
+    .container{
+      color: white;
+    }
+    .navbar navbar-inverse{
+      margin-left: -50px;
+      padding-right: 20px;
+    }
+    #button{
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+<div>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+	  <a class="navbar-brand" routerLink="/home"><span class="glyphicon glyphicon-home"></span> Home</a>
+    <a class="navbar-brand" routerLink="/userid"><span class="glyphicon glyphicon-user"></span> Profile</a>
+    <a class="navbar-brand" routerLink="/trainingcurrent"><span class="glyphicon glyphicon-bookmark"></span> Current Training</a>
+    <a class="navbar-brand" routerLink="/trainingcompleted"><span class="glyphicon glyphicon-book"></span> Completed Training</a>
+    <a class="navbar-brand" routerLink="/paymentuser"><i class="fa fa-credit-card" style="font-size:24px"></i> Payment</a>
+  </div>
+    
+  
+    <div class="nav navbar-right" style="padding-left: 300px;">
+       <button id="button" (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</button>
+    </div>
+ 
+  </div>
+</nav>
+</div>
+<div>
+  <h1>Welcome</h1>
+  <h1 id="l">User</h1>
+  <hr>
+  <!--<h1><img src="/assets/z.jpg" style="float:center;width:600px;height:200px;"/></h1>-->
+</div>
+<br><br>
+<div class="container text-center">
+  <h2 style="color: black;">Available Technologies and Their Respective Trainings</h2>
+  <hr>
+  <br><br>
+  <div class="container text-center" style="overflow-x: auto;">
+    <br>
+    <h2 style="color: black;">Technologies Available</h2>
+    <br><Br>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Technology Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let technology of technology">
+        <td>{{technology.id}}</td>
+        <td>{{technology.techName}}</td>
+        <td>{{technology.description}}</td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    <div class="container text-center" style="overflow-x: auto;">
+      <br>
+      <h2 style="color: black;">All Trainings Available</h2>
+      <br><Br>
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Mentor Name</th>
+          <th>Tech Name</th>
+          <th>Skill Name</th>
+          <th>Fees</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let training of training">
+          <td>{{training.id}}</td>
+          <td>{{training.startDate}}</td>
+          <td>{{training.endDate}}</td>
+          <td>{{training.startTime}}</td>
+          <td>{{training.endTime}}</td>
+          <td>{{training.mentor.firstName}}</td>
+          <td>{{training.technology.techName}}</td>
+          <td><span *ngFor="let skill of training.skills">{{skill.name}}</span></td>
+          <td>{{training.fees}}</td>
+          <td><button class="btn btn-success" (click)="enroll(training)"> Enroll</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    
+</div>
+
+<br>
+<br>
+<br>
+
+</body>
+</html>

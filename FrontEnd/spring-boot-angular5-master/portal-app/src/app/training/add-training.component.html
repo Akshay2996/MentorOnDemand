@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+    background-image: linear-gradient(45deg,rgb(209, 136, 136),rgb(135, 196, 204),rgb(224, 168, 224));
+  }
+  #form{
+    max-width: 500px;
+    min-height: 1200px;
+    font-size: 14px;
+    text-align: center;
+  }
+  button{
+    width: 50%;
+    font-size: 14px;
+    border-radius:25px;
+  }
+  input{
+    font-size: 14px;
+    border-radius:25px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<a routerLink="/admin" style="color: black"><h3>Back</h3></a>
+<br><br>
+<div id="form" class="container">
+  <h1>Add Training</h1>
+  <br><br>
+<form>
+
+  <div class="form-group">
+      <input [(ngModel)]="training.progress" placeholder="Progress" name="progress" class="form-control w-100" id="progress">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <input [(ngModel)]="training.commissionPercent" placeholder="Commission Percent" name="commissionPercent" class="form-control w-100" id="commissionPercent">
+      </div>
+      <br>
+
+  <div class="form-group">
+    <input [(ngModel)]="training.rating" placeholder="Rating" name="rating" class="form-control w-100" id="rating">
+  </div>
+  <br>
+
+  <div class="form-group">
+      <input type="datetime" [(ngModel)]="training.startDate" placeholder="Start Date (yyyy-mm-dd)" name="startDate" class="form-control w-100" id="startDate">
+    </div>
+    <br>
+
+  <div class="form-group">
+      <input type="datetime" [(ngModel)]="training.endDate" placeholder="End Date (yyyy-mm-dd)" name="endDate" class="form-control w-100" id="endDate">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <input type="datetime" [(ngModel)]="training.startTime" placeholder="Start Time (hh:mm:ss)" name="startTime" class="form-control w-100" id="startTime">
+      </div>
+      <br>
+
+      <div class="form-group">
+          <input type="datetime" [(ngModel)]="training.endTime" placeholder="End Time (hh:mm:ss)" name="endTime" class="form-control w-100" id="endTime">
+        </div>
+        <br>
+                    <div class="form-group">
+                      <input type="number" [(ngModel)]="training.fees" placeholder="Fees" name="fees" class="form-control w-100" id="fees">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <input type="string" [(ngModel)]="training.status" placeholder="Status" name="status" class="form-control w-100" id="status">
+                    </div>                    
+                    <br>
+                    <div class="form-group">
+                    <select style="border-radius:20px; font-size: 12px; text-align: center;" class="form-control" [(ngModel)]="training.technology.id" aria-placeholder="--Select Technologies--" name="id">
+                        <option value="">--Select Technologies--</option>
+                        <option *ngFor="let tech of technology" value="{{tech.id}}">{{tech.techName}}</option>                       
+                    </select>
+                  </div>
+                  <br>
+                    <div class="form-group">
+                    <select style="border-radius:20px; font-size: 12px; text-align: center;" class="form-control" [(ngModel)]="training.mentor.id" aria-placeholder="--Select Mentor--" name="id">
+                        <option value="">--Select Mentor--</option>
+                        <option *ngFor="let mentor of mentor" value="{{mentor.id}}">{{mentor.firstName}}</option>                       
+                    </select>
+                  </div>
+                  
+                    <br><br>
+  
+
+
+  <button class="btn btn-success" (click)="createTraining()" routerLink="/admin">Create</button><br><br>
+</form>
+</div>
+</body>
+</html>
